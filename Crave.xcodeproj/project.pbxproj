@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1876C9722CD41C3B0065C7F8 /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9712CD41C3B0065C7F8 /* Login */; };
+		1876C9752CD41C8E0065C7F8 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9742CD41C8E0065C7F8 /* Search */; };
+		1876C9782CD41CEA0065C7F8 /* FoundationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9772CD41CEA0065C7F8 /* FoundationKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		18E7DFA12CD415DB00AA67EC /* Crave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1876C9752CD41C8E0065C7F8 /* Search in Frameworks */,
+				1876C9782CD41CEA0065C7F8 /* FoundationKit in Frameworks */,
+				1876C9722CD41C3B0065C7F8 /* Login in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,9 @@
 			);
 			name = Crave;
 			packageProductDependencies = (
+				1876C9712CD41C3B0065C7F8 /* Login */,
+				1876C9742CD41C8E0065C7F8 /* Search */,
+				1876C9772CD41CEA0065C7F8 /* FoundationKit */,
 			);
 			productName = Crave;
 			productReference = 18E7DFA12CD415DB00AA67EC /* Crave.app */;
@@ -94,6 +106,11 @@
 			);
 			mainGroup = 18E7DF982CD415DB00AA67EC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1876C9702CD41C3B0065C7F8 /* XCLocalSwiftPackageReference "Packages/Login" */,
+				1876C9732CD41C8E0065C7F8 /* XCLocalSwiftPackageReference "Packages/Search" */,
+				1876C9762CD41CEA0065C7F8 /* XCLocalSwiftPackageReference "Packages/FoundationKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 18E7DFA22CD415DB00AA67EC /* Products */;
 			projectDirPath = "";
@@ -247,7 +264,7 @@
 				CODE_SIGN_ENTITLEMENTS = Crave/Crave.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crave/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Crave/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZPR3CCR46;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -270,10 +287,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = muhammad.osama.Crave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -286,7 +304,7 @@
 				CODE_SIGN_ENTITLEMENTS = Crave/Crave.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crave/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Crave/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZPR3CCR46;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -309,10 +327,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = muhammad.osama.Crave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -339,6 +358,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1876C9702CD41C3B0065C7F8 /* XCLocalSwiftPackageReference "Packages/Login" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Login;
+		};
+		1876C9732CD41C8E0065C7F8 /* XCLocalSwiftPackageReference "Packages/Search" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Search;
+		};
+		1876C9762CD41CEA0065C7F8 /* XCLocalSwiftPackageReference "Packages/FoundationKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/FoundationKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1876C9712CD41C3B0065C7F8 /* Login */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Login;
+		};
+		1876C9742CD41C8E0065C7F8 /* Search */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Search;
+		};
+		1876C9772CD41CEA0065C7F8 /* FoundationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FoundationKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18E7DF992CD415DB00AA67EC /* Project object */;
 }

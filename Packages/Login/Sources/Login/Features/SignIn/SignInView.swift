@@ -7,24 +7,23 @@
 
 import SwiftUI
 import CoreUI
+import ComposableArchitecture
 
 struct SignInView: View {
-    //MARK: - Variables
-    @Binding var userName: String
-    @Binding var password: String
+    @Bindable var store: StoreOf<SignIn>
     
     //MARK: - Body
     var body: some View {
         ContainerView {
             VStack {
-                LoginInputField(
+                TitleInputField(
                     title: "Enter your username",
-                    value: $userName
+                    value: $store.userName
                 )
                 
-                LoginInputField(
+                TitleInputField(
                     title: "Enter your Password",
-                    value: $password
+                    value: $store.password
                 )
                 
                 VStack(spacing: 8) {
@@ -47,13 +46,14 @@ struct SignInView: View {
                 )
             )
         }
+        .navigationBarHidden(true)
         .ignoresSafeArea(edges: .bottom)
     }
     
     //MARK: - Views
     @ViewBuilder var signupView: some View {
         Button {
-            print("action triggered")
+            store.send(.didSignUp)
         } label: {
             HStack {
                 Text("Don't have an account")
@@ -69,8 +69,7 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView(
-        userName: .constant(""),
-        password: .constant("")
-    )
+    SignInView(store: Store(initialState: SignIn.State(), reducer: {
+        SignIn()
+    }))
 }

@@ -7,36 +7,42 @@
 
 import SwiftUI
 import CoreUI
+import ComposableArchitecture
 
 struct SignUpView: View {
-    //MARK: - Variables
-    @Binding var userName: String
-    @Binding var password: String
-    @Binding var email: String
+    
+    @Bindable var store: StoreOf<SignUp>
     
     //MARK: - Body
     var body: some View {
         ContainerView {
             VStack {
-                LoginInputField(
+                TitleInputField(
                     title: "Username",
-                    value: $userName
+                    value: $store.username
                 )
                 
-                LoginInputField(
+                TitleInputField(
                     title: "Email",
-                    value: $email
+                    value: $store.email
                 )
                 
-                LoginInputField(
+                TitleInputField(
                     title: "Password",
-                    value: $password
+                    value: $store.password
                 )
                 
                 ActionButton(title: "Sign Up") {
                     print("Action Triggered")
                 }
                 .fontWeight(.semibold)
+                
+                Button {
+                    store.send(.didTabBack)
+                } label: {
+                    Text("Back")
+                }
+
             }
             .padding(.bottom, 50)
             .padding(.top, 30)
@@ -49,15 +55,8 @@ struct SignUpView: View {
                 )
             )
         }
+        .navigationBarHidden(true)
         .ignoresSafeArea(edges: .bottom)
     }
-}
-
-#Preview {
-    SignUpView(
-        userName: .constant(""),
-        password: .constant(""),
-        email: .constant("")
-    )
 }
 

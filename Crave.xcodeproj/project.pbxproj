@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18596BBF2CD945ED00A7DACD /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18596BBE2CD945ED00A7DACD /* CoreUI */; };
 		1876C9722CD41C3B0065C7F8 /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9712CD41C3B0065C7F8 /* Login */; };
 		1876C9752CD41C8E0065C7F8 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9742CD41C8E0065C7F8 /* Search */; };
-		1876C9782CD41CEA0065C7F8 /* FoundationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9772CD41CEA0065C7F8 /* FoundationKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1876C9752CD41C8E0065C7F8 /* Search in Frameworks */,
-				1876C9782CD41CEA0065C7F8 /* FoundationKit in Frameworks */,
+				18596BBF2CD945ED00A7DACD /* CoreUI in Frameworks */,
 				1876C9722CD41C3B0065C7F8 /* Login in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +76,7 @@
 			packageProductDependencies = (
 				1876C9712CD41C3B0065C7F8 /* Login */,
 				1876C9742CD41C8E0065C7F8 /* Search */,
-				1876C9772CD41CEA0065C7F8 /* FoundationKit */,
+				18596BBE2CD945ED00A7DACD /* CoreUI */,
 			);
 			productName = Crave;
 			productReference = 18E7DFA12CD415DB00AA67EC /* Crave.app */;
@@ -109,7 +109,7 @@
 			packageReferences = (
 				1876C9702CD41C3B0065C7F8 /* XCLocalSwiftPackageReference "Packages/Login" */,
 				1876C9732CD41C8E0065C7F8 /* XCLocalSwiftPackageReference "Packages/Search" */,
-				1876C9762CD41CEA0065C7F8 /* XCLocalSwiftPackageReference "Packages/FoundationKit" */,
+				18596BBD2CD945ED00A7DACD /* XCLocalSwiftPackageReference "Packages/Core" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 18E7DFA22CD415DB00AA67EC /* Products */;
@@ -360,6 +360,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		18596BBD2CD945ED00A7DACD /* XCLocalSwiftPackageReference "Packages/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core;
+		};
 		1876C9702CD41C3B0065C7F8 /* XCLocalSwiftPackageReference "Packages/Login" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/Login;
@@ -368,13 +372,13 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/Search;
 		};
-		1876C9762CD41CEA0065C7F8 /* XCLocalSwiftPackageReference "Packages/FoundationKit" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Packages/FoundationKit;
-		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		18596BBE2CD945ED00A7DACD /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
 		1876C9712CD41C3B0065C7F8 /* Login */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Login;
@@ -382,10 +386,6 @@
 		1876C9742CD41C8E0065C7F8 /* Search */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Search;
-		};
-		1876C9772CD41CEA0065C7F8 /* FoundationKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FoundationKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

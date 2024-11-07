@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct LoginInputField: View {
+public struct TitleInputField: View {
     
     private var title: String
     @Binding private var value: String
@@ -34,7 +34,7 @@ public struct LoginInputField: View {
 }
 
 #Preview {
-    LoginInputField(
+    TitleInputField(
         title: "title",
         value: .constant("")
     )

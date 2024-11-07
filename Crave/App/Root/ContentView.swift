@@ -6,19 +6,15 @@
 //
 
 import SwiftUI
+import Login
 
 struct ContentView: View {
+    @State var userData: String = ""
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        LoginEntry()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(userData: "")
 }

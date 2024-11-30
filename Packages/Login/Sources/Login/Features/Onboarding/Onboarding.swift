@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Onboarding.swift
 //  Login
 //
 //  Created by Muhammad Osama on 02/11/2024.
@@ -8,6 +8,7 @@
 import Foundation
 import ComposableArchitecture
 import Combine
+import User
 
 @Reducer
 struct Onboarding {
@@ -25,6 +26,7 @@ struct Onboarding {
     enum Action {
         case path(StackActionOf<Path>)
         case actionButtonTapped
+        case userLoged(User)
     }
     
     var body: some Reducer<State, Action> {
@@ -36,7 +38,12 @@ struct Onboarding {
             case let .path(.element(_, action: .signIn(.didSignUp))):
                 state.path.append(.signUp(SignUp.State()))
                 return .none
+            case let .path(.element(_, action: .signIn(.signInSuccess(user)))),
+                let .path(.element(_, action: .signUp(.userSignedUp(user)))):
+                return .send(.userLoged(user))
             case .path(_):
+                return .none
+            case .userLoged(let user):
                 return .none
             }
         }

@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  OnboardingView.swift
 //  Login
 //
 //  Created by Muhammad Osama on 01/11/2024.

@@ -24,18 +24,27 @@ struct SignUpView: View {
                 
                 TitleInputField(
                     title: "Email",
-                    value: $store.email
+                    value: $store.email,
+                    keyboardType: .email
                 )
                 
                 TitleInputField(
                     title: "Password",
-                    value: $store.password
+                    value: $store.password,
+                    keyboardType: .password
+                )
+                
+                TitleInputField(
+                    title: "Confirmed Password",
+                    value: $store.confirmedPassword,
+                    keyboardType: .password
                 )
                 
                 ActionButton(title: "Sign Up") {
-                    print("Action Triggered")
+                    store.send(.didSignUp)
                 }
                 .fontWeight(.semibold)
+                .environment(\.isActive, store.actionButtonEnabled)
                 
                 Button {
                     store.send(.didTabBack)

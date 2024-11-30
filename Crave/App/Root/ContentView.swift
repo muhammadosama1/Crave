@@ -7,14 +7,27 @@
 
 import SwiftUI
 import Login
+import User
 
 struct ContentView: View {
-    @State var userData: String = ""
+    @State var userData: User?
+    
     var body: some View {
-        LoginEntry()
+        if userData != nil {
+            Text("Logged in")
+        } else {
+            LoginEntry($userData)
+        }
     }
 }
 
 #Preview {
-    ContentView(userData: "")
+    ContentView(
+        userData:
+            User(
+                name: "Muhammad",
+                email: "muhammad@hotmail.com",
+                password: "123456"
+            )
+    )
 }

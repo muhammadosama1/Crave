@@ -8,6 +8,9 @@
 import SwiftUI
 
 public struct ActionButton: View {
+    
+    @Environment(\.isActive) var isActive
+    
     private var title: String
     private var action: () -> Void
     
@@ -28,9 +31,10 @@ public struct ActionButton: View {
                 .frame(maxWidth: .infinity)
                 .foregroundStyle(.black)
                 .font(.title3)
-                .background(Color.appPrimary)
+                .background(isActive ? Color.appPrimary : .gray.opacity(0.3))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .padding()
         }
+        .disabled(!isActive)
     }
 }

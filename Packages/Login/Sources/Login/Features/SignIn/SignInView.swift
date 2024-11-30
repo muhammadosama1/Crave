@@ -17,20 +17,23 @@ struct SignInView: View {
         ContainerView {
             VStack {
                 TitleInputField(
-                    title: "Enter your username",
-                    value: $store.userName
+                    title: "Enter your email",
+                    value: $store.email,
+                    keyboardType: .email
                 )
                 
                 TitleInputField(
                     title: "Enter your Password",
-                    value: $store.password
+                    value: $store.password,
+                    keyboardType: .password
                 )
                 
                 VStack(spacing: 8) {
                     ActionButton(title: "Sign In") {
-                        print("Action Triggered")
+                        store.send(.didSignIn)
                     }
                     .fontWeight(.semibold)
+                    .environment(\.isActive, store.isSignInButtonEnabled)
                     
                     signupView
                 }

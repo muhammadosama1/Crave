@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		183F28012CDFFF350088AD9D /* User in Frameworks */ = {isa = PBXBuildFile; productRef = 183F28002CDFFF350088AD9D /* User */; };
+		18596BBF2CD945ED00A7DACD /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18596BBE2CD945ED00A7DACD /* CoreUI */; };
+		185E8E342CDE469C00BCDADD /* Persistence in Frameworks */ = {isa = PBXBuildFile; productRef = 185E8E332CDE469C00BCDADD /* Persistence */; };
+		1876C9722CD41C3B0065C7F8 /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9712CD41C3B0065C7F8 /* Login */; };
+		1876C9752CD41C8E0065C7F8 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = 1876C9742CD41C8E0065C7F8 /* Search */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		18E7DFA12CD415DB00AA67EC /* Crave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,16 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185E8E342CDE469C00BCDADD /* Persistence in Frameworks */,
+				1876C9752CD41C8E0065C7F8 /* Search in Frameworks */,
+				183F28012CDFFF350088AD9D /* User in Frameworks */,
+				18596BBF2CD945ED00A7DACD /* CoreUI in Frameworks */,
+				1876C9722CD41C3B0065C7F8 /* Login in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185E8E322CDE469C00BCDADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18E7DF982CD415DB00AA67EC = {
 			isa = PBXGroup;
 			children = (
 				18E7DFA32CD415DB00AA67EC /* Crave */,
+				185E8E322CDE469C00BCDADD /* Frameworks */,
 				18E7DFA22CD415DB00AA67EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +86,11 @@
 			);
 			name = Crave;
 			packageProductDependencies = (
+				1876C9712CD41C3B0065C7F8 /* Login */,
+				1876C9742CD41C8E0065C7F8 /* Search */,
+				18596BBE2CD945ED00A7DACD /* CoreUI */,
+				185E8E332CDE469C00BCDADD /* Persistence */,
+				183F28002CDFFF350088AD9D /* User */,
 			);
 			productName = Crave;
 			productReference = 18E7DFA12CD415DB00AA67EC /* Crave.app */;
@@ -94,6 +120,12 @@
 			);
 			mainGroup = 18E7DF982CD415DB00AA67EC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1876C9702CD41C3B0065C7F8 /* XCLocalSwiftPackageReference "Packages/Login" */,
+				1876C9732CD41C8E0065C7F8 /* XCLocalSwiftPackageReference "Packages/Search" */,
+				18596BBD2CD945ED00A7DACD /* XCLocalSwiftPackageReference "Packages/Core" */,
+				183F27FF2CDFFF350088AD9D /* XCLocalSwiftPackageReference "Packages/User" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 18E7DFA22CD415DB00AA67EC /* Products */;
 			projectDirPath = "";
@@ -247,7 +279,7 @@
 				CODE_SIGN_ENTITLEMENTS = Crave/Crave.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crave/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Crave/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZPR3CCR46;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -270,10 +302,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = muhammad.osama.Crave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -286,7 +319,7 @@
 				CODE_SIGN_ENTITLEMENTS = Crave/Crave.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crave/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Crave/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZPR3CCR46;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -309,10 +342,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = muhammad.osama.Crave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -339,6 +373,49 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		183F27FF2CDFFF350088AD9D /* XCLocalSwiftPackageReference "Packages/User" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/User;
+		};
+		18596BBD2CD945ED00A7DACD /* XCLocalSwiftPackageReference "Packages/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core;
+		};
+		1876C9702CD41C3B0065C7F8 /* XCLocalSwiftPackageReference "Packages/Login" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Login;
+		};
+		1876C9732CD41C8E0065C7F8 /* XCLocalSwiftPackageReference "Packages/Search" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Search;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		183F28002CDFFF350088AD9D /* User */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = User;
+		};
+		18596BBE2CD945ED00A7DACD /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
+		185E8E332CDE469C00BCDADD /* Persistence */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18596BBD2CD945ED00A7DACD /* XCLocalSwiftPackageReference "Packages/Core" */;
+			productName = Persistence;
+		};
+		1876C9712CD41C3B0065C7F8 /* Login */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Login;
+		};
+		1876C9742CD41C8E0065C7F8 /* Search */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Search;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18E7DF992CD415DB00AA67EC /* Project object */;
 }

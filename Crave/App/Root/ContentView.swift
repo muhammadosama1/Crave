@@ -22,12 +22,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(
-        userData:
-            User(
-                name: "Muhammad",
-                email: "muhammad@hotmail.com",
-                password: "123456"
-            )
-    )
+    ContentView()
 }

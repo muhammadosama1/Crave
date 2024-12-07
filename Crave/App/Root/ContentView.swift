@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         if userData != nil {
-            Text("Logged in")
+            CoordinatorView()
         } else {
             LoginEntry($userData)
         }

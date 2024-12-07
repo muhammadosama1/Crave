@@ -17,18 +17,18 @@ struct Onboarding {
         case signIn(SignIn)
         case signUp(SignUp)
     }
-    
+
     @ObservableState
     struct State: Equatable {
         var path = StackState<Path.State>()
     }
-    
+
     enum Action {
         case path(StackActionOf<Path>)
         case actionButtonTapped
         case userLoged(User)
     }
-    
+
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
@@ -41,7 +41,7 @@ struct Onboarding {
             case let .path(.element(_, action: .signIn(.signInSuccess(user)))),
                 let .path(.element(_, action: .signUp(.userSignedUp(user)))):
                 return .send(.userLoged(user))
-            case .path(_):
+            case .path:
                 return .none
             case .userLoged(let user):
                 return .none

@@ -11,7 +11,6 @@ import User
 
 struct ContentView: View {
     @State var userData: User?
-    
     var body: some View {
         if userData != nil {
             Text("Logged in")

@@ -8,12 +8,10 @@
 import SwiftUI
 
 public struct ActionButton: View {
-    
     @Environment(\.isActive) var isActive
-    
     private var title: String
     private var action: () -> Void
-    
+
     public init(
         title: String,
         action: @escaping () -> Void
@@ -21,7 +19,7 @@ public struct ActionButton: View {
         self.title = title
         self.action = action
     }
-    
+
     public var body: some View {
         Button {
             action()

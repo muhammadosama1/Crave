@@ -14,21 +14,21 @@ import User
 @Reducer
 struct SignIn {
     @Dependency(\.userDatabase) var userDatabase
-    
+
     @ObservableState
     struct State: Equatable {
         var email: String = ""
         var password: String = ""
         var isSignInButtonEnabled: Bool = false
     }
-    
+
     enum Action: BindableAction {
         case binding(BindingAction<State>)
         case didSignIn
         case didSignUp
         case signInSuccess(User)
     }
-    
+
     var body: some ReducerOf<Self> {
         BindingReducer()
         Reduce { state, action in
@@ -44,7 +44,7 @@ struct SignIn {
                         guard let user = user.first,
                               user.email == state.email,
                               user.password == state.password else { return }
-                        
+
                         await send(.signInSuccess(user.mapping()))
                     } catch {
                         print("error")

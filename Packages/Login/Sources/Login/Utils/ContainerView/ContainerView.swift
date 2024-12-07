@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContainerView<Content: View>: View {
-    
+
     @ViewBuilder var content: Content
-    
+
     var body: some View {
         ZStack(alignment: .top) {
             Image(.bg)
@@ -23,16 +23,16 @@ struct ContainerView<Content: View>: View {
                          .opacity(0.5)
                          .ignoresSafeArea(.all)
                  }
-            
+
             VStack {
                 Text("Welcome to Crave 👋🏻")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding()
-                
+
                 Spacer()
-                
+
                 content
 
             }

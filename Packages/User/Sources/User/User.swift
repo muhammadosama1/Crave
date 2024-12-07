@@ -12,7 +12,7 @@ public struct User {
     public var name: String
     public var email: String
     public var password: String
-    
+
     public init(
         name: String,
         email: String,
@@ -28,7 +28,7 @@ extension User {
     public func mapping() -> UserModel {
         UserModel(name: name, email: email, password: password)
     }
-    
+
     public var toDBModel: UserModel {
         UserModel(name: name, email: email, password: password)
     }

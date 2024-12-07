@@ -14,7 +14,7 @@ public class UserModel {
     public var name: String
     public var email: String
     public var password: String
-    
+
     public init(name: String, email: String, password: String) {
         self.name = name
         self.email = email

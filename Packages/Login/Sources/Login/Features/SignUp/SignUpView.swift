@@ -10,10 +10,10 @@ import CoreUI
 import ComposableArchitecture
 
 struct SignUpView: View {
-    
+
     @Bindable var store: StoreOf<SignUp>
-    
-    //MARK: - Body
+
+    // MARK: - Body
     var body: some View {
         ContainerView {
             VStack {
@@ -21,31 +21,31 @@ struct SignUpView: View {
                     title: "Username",
                     value: $store.username
                 )
-                
+
                 TitleInputField(
                     title: "Email",
                     value: $store.email,
                     keyboardType: .email
                 )
-                
+
                 TitleInputField(
                     title: "Password",
                     value: $store.password,
                     keyboardType: .password
                 )
-                
+
                 TitleInputField(
                     title: "Confirmed Password",
                     value: $store.confirmedPassword,
                     keyboardType: .password
                 )
-                
+
                 ActionButton(title: "Sign Up") {
                     store.send(.didSignUp)
                 }
                 .fontWeight(.semibold)
                 .environment(\.isActive, store.actionButtonEnabled)
-                
+
                 Button {
                     store.send(.didTabBack)
                 } label: {
@@ -68,4 +68,3 @@ struct SignUpView: View {
         .ignoresSafeArea(edges: .bottom)
     }
 }
-

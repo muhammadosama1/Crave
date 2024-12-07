@@ -9,11 +9,9 @@ import SwiftUI
 
 @main
 struct CraveApp: App {
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
-

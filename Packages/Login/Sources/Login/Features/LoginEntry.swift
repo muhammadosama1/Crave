@@ -14,7 +14,7 @@ public struct LoginEntry: View {
     public init(_ user: Binding<User?>) {
         _userData = user
     }
-    
+
     public var body: some View {
         OnboardingView(
             store: Store(

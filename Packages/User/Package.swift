@@ -10,7 +10,7 @@ let package = Package(
         .library(
             name: "User",
             targets: ["User"]
-        ),
+        )
     ],
     dependencies: [
         .package(path: "../Core")
@@ -19,7 +19,7 @@ let package = Package(
         .target(
             name: "User",
             dependencies: [
-                .product(name: "Persistence", package: "Core"),
+                .product(name: "Persistence", package: "Core")
             ]
         )
     ]

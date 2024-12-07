@@ -11,7 +11,7 @@ import ComposableArchitecture
 
 struct OnboardingView: View {
     @Bindable var store: StoreOf<Onboarding>
-    
+
     var body: some View {
         NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
             ContainerView {
@@ -21,7 +21,7 @@ struct OnboardingView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
-                
+
                 ActionButton(title: "Get Started") {
                     store.send(.actionButtonTapped)
                 }

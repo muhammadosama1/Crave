@@ -8,17 +8,17 @@
 import SwiftUI
 
 public struct TitleInputField: View {
-    
+
     public enum FieldType {
         case password
         case email
         case `default`
     }
-    
+
     private var title: String
     private var keyboardType: FieldType
     @Binding private var value: String
-    
+
     public init(
         title: String,
         value: Binding<String>,
@@ -28,14 +28,14 @@ public struct TitleInputField: View {
         self._value = value
         self.keyboardType = keyboardType
     }
-    
+
     public var body: some View {
         VStack(alignment: .leading) {
             Text(title)
                 .font(.callout)
                 .fontWeight(.semibold)
                 .padding(.horizontal, 5)
-            
+
             fieldView(keyboardType)
                 .padding()
                 .background(Color.inputFieldBackground)
@@ -43,7 +43,7 @@ public struct TitleInputField: View {
         }
         .padding([.horizontal, .bottom])
     }
-    
+
     @ViewBuilder
     private func fieldView(_ type: FieldType) -> some View {
         switch type {

@@ -15,7 +15,7 @@ import Persistence
 struct SignUp {
     @Dependency(\.dismiss) var dismiss
     @Dependency(\.userDatabase) var userDatabase
-    
+
     @ObservableState
     struct State: Equatable {
         var username: String = ""
@@ -24,14 +24,14 @@ struct SignUp {
         var confirmedPassword: String = ""
         var actionButtonEnabled: Bool = false
     }
-    
+
     enum Action: BindableAction {
         case didSignUp
         case didTabBack
         case userSignedUp(User)
         case binding(BindingAction<State>)
     }
-    
+
     var body: some ReducerOf<Self> {
         BindingReducer()
         Reduce { state, action in
